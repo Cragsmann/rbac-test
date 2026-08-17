@@ -1,0 +1,14 @@
+# $schema: https://raw.githubusercontent.com/knative/func/main/schema/func_yaml-schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/knative/func/main/schema/func_yaml-schema.json
+specVersion: 0.36.0
+name: rbac-123
+runtime: node
+registry: image-registry.openshift-image-registry.svc:5000/rbac-123
+namespace: rbac-123
+created: 2026-08-17T10:36:17.224423787Z
+run:
+  envs:
+  - name: env123
+    value: env123
+  - name: secret123
+    value: '{{ secret:secret123:secret123 }}'
